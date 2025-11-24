@@ -49,10 +49,10 @@ mostrarSecao();
 // ===============================================
 btnSalvarRemedio?.addEventListener("click", async () => {
     
-    // 🔥 CORREÇÃO PRINCIPAL: Usando "idAnimalAtual" em vez de "idAnimalSelecionado"
+    
     const idDoAnimal = localStorage.getItem("idAnimalEdicao");
 
-    // Validação de campos e ID
+   
     if (!idDoAnimal) {
         return alert("Erro: ID do animal não encontrado. Volte e selecione-o novamente.");
     }
@@ -75,7 +75,7 @@ btnSalvarRemedio?.addEventListener("click", async () => {
 });
 
 
-        // 💡 CORREÇÃO: Declarar e inicializar 'dataRes' IMEDIATAMENTE após o fetch
+        
 const dataRes = await r.json(); 
 
         if (r.ok) {
@@ -100,7 +100,7 @@ const dataRes = await r.json();
 // ===============================================
 btnSalvarVacina?.addEventListener("click", async () => {
     
-    // 🔥 CORREÇÃO PRINCIPAL: Usando "idAnimalAtual"
+  
     const idDoAnimal = localStorage.getItem("idAnimalEdicao");
 
 
