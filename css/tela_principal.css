@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9cd0c3;
+  padding: 10px 40px;
+  border-bottom: 1px solid #999;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 55px;
+}
+
+.logo-area h1 {
+  font-size: 28px;
+  font-family: 'Georgia', serif;
+  color: #225d58;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-topo {
+  background-color: #68b5a0;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* PERFIL */
+.perfil {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.foto-perfil {
+  position: relative;
+  display: inline-block;
+}
+
+.foto-perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  object-fit: cover;
+}
+
+.trocar-foto {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  background: #45b1a0;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.titulo-tutor {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a3940;
+}
+
+#nomeTutor {
+  display: block;
+  margin: 8px auto;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  color: #2b6b6a;
+  background: none;
+  font-weight: bold;
+  width: fit-content;
+}
+
+/* LISTA DE ANIMAIS */
+.area-animais {
+  margin-top: 30px;
+  padding-left: 10px; /* puxei mais pra esquerda */
+}
+
+.btn-adicionar {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #2b6b6a;
+}
+
+.lista-animais {
+  margin-top: 20px;
+}
+
+/* CARD DE ANIMAL */
+.card-animal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ede8e8;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0 auto 15px auto; /* centraliza */
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  width: 70%; /* card mais fino */
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* foto mais próxima do texto */
+}
+
+.card-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.card-text strong {
+  font-size: 16px;
+}
+
+.card-text span {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* BOTÃO EDITAR */
+.btn-editar {
+  background-color: #45b1a0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-editar:hover {
+  background-color: #389587;
+}
+
+/* BOTÃO EXCLUIR */
+.btn-excluir {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-excluir:hover {
+  background-color: #c0392b;
+}
+
+/* Botão visualizar */
+.btn-visualizar {
+  background-color: #4A90E2; /* azul bonito */
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-visualizar:hover {
+  background-color: #357ABD;
+}
+

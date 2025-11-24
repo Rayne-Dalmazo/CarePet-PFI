@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #9cd0c3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+header img {
+  height: 50px;
+}
+
+header h1 {
+  font-family: 'Georgia', serif;
+  color: #304c47;
+  font-size: 28px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu button {
+  background-color: #68b5a0;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background-color: #5aa38f;
+}
+
+/* Conteúdo principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+}
+
+.foto input {
+  display: none;
+}
+
+.info-box {
+  background-color: #efeaea;
+  width: 75%;
+  margin-top: 25px;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
+
+.info-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 40px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 80%;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid #777;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+}
+
+select {
+  background-color: transparent;
+  border-bottom: 1px solid #777;
+  cursor: pointer;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio-btn.active {
+  background-color: #68b5a0;
+  color: white;
+  border-color: #68b5a0;
+}
+
+/* Ícones das seções */
+.icones {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 25px;
+  align-items: flex-start;
+}
+
+.icones div {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icones div:hover {
+  transform: scale(1.05);
+}
+
+.icones img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+
+/* Botão Modificar */
+#btnModificar {
+  display: block;
+  margin: 25px auto 10px;
+  background-color: #68b5a0;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnModificar:hover {
+  background-color: #5aa38f;
+}
+
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  background-color: #68b5a0;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+  .foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* IMPORTANTE */
+    cursor: pointer;
+}
+
+.foto input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#previewFoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* escondido até escolher foto */
+}
+
+#textoFoto {
+    position: absolute;
+    font-size: 14px;
+}
+.voltar {
+  position: absolute;
+  left: 20px;    /* distância da borda esquerda */
+  top: 80px;     /* distância do topo */
+  text-decoration: none;
+  font-size: 22px;
+  color: #68b5a0;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.right {
+  position: relative; /* necessário para a seta seguir essa div */
+}
+
+.voltar:hover {
+  transform: translateX(-5px);
+  color: #24696d;
+}
+
+/* POPUP padrão */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 380px;
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.popup-btns {
+  display: flex;
+  justify-content: space-between;
+}
+/* Caixa de detalhes (Remédios, Vacinação, Exames) */
+.detalhes-box {
+  background-color: #efeaea;
+  width: 75%;
+  margin-top: 25px;
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.detalhes-box h3 {
+  font-family: 'Georgia', serif;
+  margin-bottom: 15px;
+  color: #304c47;
+  text-align: center;
+}
+
+.detalhes-box label {
+  font-weight: 600;
+  color: #333;
+}
+
+.detalhes-box input[type="text"],
+.detalhes-box input[type="date"],
+.detalhes-box input[type="number"] {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: none;
+  border-bottom: 1px solid #777;
+  background: transparent;
+  outline: none;
+}
+
+.detalhes-box button {
+  background-color: #68b5a0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 10px auto 0;
+  transition: 0.3s;
+}
+
+.detalhes-box button:hover {
+  background-color: #5aa38f;
+}
+
+/* animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

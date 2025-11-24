@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CarePet - Cadastro</title>
+  <link rel="stylesheet" href="../css/prontuario.css">
+</head>
+
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="../imagens/logo.png" alt="logo">
+      <h1>CarePet</h1>
+    </div>
+
+    <div class="menu">
+    </div>
+  </header>
+
+  <main>
+    <a href="tela_principal.html" class="voltar"> ← </a>
+    <!-- Foto do pet -->
+    <label class="foto">
+      <img id="previewFoto" alt="Foto do pet" style="display:none;">
+      <p id="textoFoto">Adicionar<br>Foto</p>
+      <input type="file" id="foto" name="foto" accept="image/*">
+    </label>
+
+    
+    <div class="info-box">
+      <h2>Informações</h2>
+
+      <div class="form-grid">
+
+        <div>
+          <label>Adicionar Nome:</label><br>
+          <input type="text" id="nome" placeholder="Nome do pet">
+        </div>
+
+        <div>
+          <label>Idade:</label><br>
+          <input type="number" id="idade" placeholder="Ex: 3">
+        </div>
+
+        <div>
+          <label>Raça:</label><br>
+          <input type="text" id="raca" placeholder="Raça do animal">
+        </div>
+
+        <div>
+          <label>Sexo:</label><br>
+          <input type="text" id="sexo" placeholder="Masculino ou Feminino">
+        </div>
+
+        <div>
+          <label>Porte:</label><br>
+          <select id="porte">
+            <option value="" disabled selected>Selecione</option>
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+          </select>
+        </div>
+
+        <!-- Grupo Castrado -->
+        <div>
+          <label>Castrado:</label><br>
+          <div id="castradoGroup" class="radio-group">
+            <span class="radio-btn" onclick="selectOption(this)">Sim</span>
+            <span class="radio-btn" onclick="selectOption(this)">Não</span>
+          </div>
+        </div>
+
+        <!-- Espaço vazio para manter grade -->
+        <div></div>
+
+        <!-- Grupo Adotado -->
+        <div>
+          <label>Animal Adotado?</label><br>
+          <div id="adotadoGroup" class="radio-group">
+            <span class="radio-btn" onclick="selectOption(this)">Sim</span>
+            <span class="radio-btn" onclick="selectOption(this)">Não</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Ícones -->
+      <div class="icones-secao" style="display:none;">
+        <div onclick="irParaDetalhes('remedios')">
+          <img src="../imagens/remedio.png">
+          <p>Remédios</p>
+        </div>
+
+        <div onclick="irParaDetalhes('vacinas')">
+          <img src="../imagens/vacina.png">
+          <p>Vacinação</p>
+        </div>
+
+        <div onclick="irParaDetalhes('exames')">
+          <img src="../imagens/exame.png">
+          <p>Exames</p>
+        </div>
+      </div>
+
+      <button class="finalizar">Cadastrar Animal</button>
+
+
+    </div>
+  </main>
+
+  <script src="../js/script_prontuario.js"></script>
+</body>
+</html>

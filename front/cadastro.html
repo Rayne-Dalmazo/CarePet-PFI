@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CarePet - Cadastro</title>
+  <link rel="stylesheet" href="../css/cadastro.css" />
+</head>
+<body>
+  <div class="left">
+    <div class="brand">
+      <img src="../imagens/logo.png" alt="Logo" class="logo" />
+      <h1>CarePet</h1>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="pets">
+      <img src="../imagens/dog.png" alt="Cachorrinho" />
+    </div>
+    <a href="login.html" class="voltar"> ← Voltar
+</a>
+    <h3>Cadastro</h3>
+
+    <form id="cadastroForm" class="form" autocomplete="off">
+      <input type="text" id="nome" name="nome" placeholder="Nome" required />
+      <input type="email" id="email" name="email" placeholder="E-mail" required />
+      <input type="password" id="senha" name="senha" placeholder="Senha" required autocomplete="new-password" />
+      <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirmar Senha" required autocomplete="new-password" />
+      <button class="btn" type="submit">Cadastrar</button>
+    </form>
+
+    <script src="../js/script_cadastro.js"></script>
+  </div>
+</body>
+</html>

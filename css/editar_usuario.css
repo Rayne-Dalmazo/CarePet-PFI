@@ -1,0 +1,156 @@
+/* =======================
+   ESTILO GERAL
+======================= */
+
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Georgia";
+}
+
+/* =======================
+   TOPO / HEADER
+======================= */
+
+.topo {
+    background: #9cd0c3;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 25px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 26px;
+    color: #1b3d3d;
+    margin: 0;
+}
+
+/* =======================
+   CONTEÚDO PRINCIPAL
+======================= */
+
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container h2 {
+    font-size: 28px;
+    color: #1b3d3d;
+    margin-bottom: 20px;
+}
+
+/* =======================
+   FOTO DO USUÁRIO
+======================= */
+
+.foto-user {
+    text-align: center;
+}
+
+.foto-user img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1b3d3d;
+    margin-bottom: 10px;
+}
+
+.trocarFoto {
+    display: inline-block;
+    background: #1b3d3d;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* =======================
+   CARD DO FORMULÁRIO
+======================= */
+
+.card-form {
+    background: #ede8e8;
+    width: 420px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* =======================
+   FORMULÁRIO
+======================= */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+    color: #244b4b;
+    font-size: 16px;
+}
+
+form input {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: #e9f4f4;
+    font-size: 15px;
+    outline: none;
+}
+
+/* =======================
+   BOTÕES
+======================= */
+
+.btnSalvar {
+    margin-top: 20px;
+    background: #3aa06d;
+    color: white;
+    padding: 12px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+    transition: 0.2s;
+}
+
+.btnSalvar:hover {
+    background: #328c5e;
+}
+
+.btn {
+    background: #68b5a0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #163131;
+}

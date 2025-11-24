@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Animal</title>
+  <link rel="stylesheet" href="../css/visualizar.css">
+</head>
+
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <button class="btn-voltar" onclick="history.back()">←</button>
+
+  <!-- CARD PRINCIPAL -->
+  <div class="card-principal">
+
+    <!-- FOTO DENTRO DO CARD -->
+    <div class="foto-area">
+      <img id="fotoAnimal" class="foto-animal" src="../img/pet-default.png">
+    </div>
+
+    <h2 class="titulo">Informações</h2>
+
+    <div class="linhas">
+
+      <!-- COLUNA ESQUERDA -->
+      <div class="coluna">
+        <div class="campo">
+          <label>Nome:</label>
+          <p id="nome" class="valor"></p>
+        </div>
+
+        <div class="campo">
+          <label>Raça:</label>
+          <p id="raca" class="valor"></p>
+        </div>
+
+        <div class="campo">
+          <label>Porte:</label>
+          <p id="porte" class="valor"></p>
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA -->
+      <div class="coluna">
+        <div class="campo">
+          <label>Idade:</label>
+          <p id="idade" class="valor"></p>
+        </div>
+
+        <div class="campo">
+          <label>Sexo:</label>
+          <p id="sexo" class="valor"></p>
+        </div>
+
+        <div class="campo">
+          <label>Castrado:</label>
+          <p id="castrado" class="valor"></p>
+        </div>
+
+        <div class="campo">
+          <label>Adotado:</label>
+          <p id="adotado" class="valor"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ÍCONES -->
+    <div class="icon-row">
+      <div class="icon" data-view="remedios">
+        <img src="../imagens/remedio.png">
+        <p>Remédios</p>
+      </div>
+
+      <div class="icon" data-view="vacinas">
+        <img src="../imagens/vacina.png">
+        <p>Vacinação</p>
+      </div>
+
+      <div class="icon" data-view="exames">
+        <img src="../imagens/exame.png">
+        <p>Exames</p>
+      </div>
+    </div>
+
+    <!-- ÁREA ONDE MUDA O CONTEÚDO PELOS ÍCONES -->
+    <div id="conteudo-area"></div>
+
+  </div>
+
+  <script src="../js/visualizar.js"></script>
+</body>
+</html>

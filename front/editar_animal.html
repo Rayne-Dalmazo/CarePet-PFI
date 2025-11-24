@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CarePet - Cadastro</title>
+  <link rel="stylesheet" href="../css/editar_animal.css">
+</head>
+
+<body>
+
+<header>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="../imagens/logo.png" alt="logo">
+    <h1>CarePet</h1>
+  </div>
+</header>
+
+<main>
+
+  <!-- Botão Voltar -->
+  <a href="../front/tela_principal.html" class="voltar"> ← </a>
+
+  <!-- FOTO DO PET -->
+  <label class="foto">
+    <img id="previewFoto" alt="Foto do pet" style="display:none;">
+    <p id="textoFoto">Adicionar<br>Foto</p>
+    <input type="file" id="foto" accept="image/*">
+  </label>
+
+  <div class="info-box">
+
+    <h2>Informações</h2>
+
+    <!-- ================= FORMULÁRIO ================== -->
+    <div class="form-grid">
+
+      <div>
+        <label>Nome:</label>
+        <input type="text" id="nome">
+      </div>
+
+      <div>
+        <label>Idade:</label>
+        <input type="number" id="idade">
+      </div>
+
+      <div>
+        <label>Raça:</label>
+        <input type="text" id="raca">
+      </div>
+
+      <div>
+        <label>Sexo:</label>
+        <input type="text" id="sexo">
+      </div>
+
+      <div>
+        <label>Porte:</label>
+        <select id="porte">
+          <option disabled selected>Selecione</option>
+          <option>Pequeno</option>
+          <option>Médio</option>
+          <option>Grande</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Castrado:</label>
+        <div id="castradoGroup" class="option-group">
+          <span class="sim radio-btn" onclick="selectOption(this)">Sim</span>
+          <span class="nao radio-btn" onclick="selectOption(this)">Não</span>
+        </div>
+      </div>
+
+      <div></div>
+
+      <div>
+        <label>Animal Adotado?</label>
+        <div id="adotadoGroup" class="option-group">
+          <span class="sim radio-btn" onclick="selectOption(this)">Sim</span>
+          <span class="nao radio-btn" onclick="selectOption(this)">Não</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= ÍCONES ================= -->
+    <div class="icones">
+
+      <div onclick="irParaDetalhes('remedios')">
+        <img src="../imagens/remedio.png">
+        <p>Remédios</p>
+      </div>
+
+      <div onclick="irParaDetalhes('vacinas')">
+        <img src="../imagens/vacina.png">
+        <p>Vacinação</p>
+      </div>
+
+      <div onclick="irParaDetalhes('exames')">
+        <img src="../imagens/exame.png">
+        <p>Exames</p>
+      </div>
+
+    </div>
+
+    <!-- ================= ÁREA DINÂMICA DO JS ================= -->
+    <div id="conteudoDetalhes" class="detalhes-box" style="display:none;"></div>
+
+    <!-- Listas montadas pelo JS -->
+    <div class="lista-detalhes">
+      <ul id="remediosList" class="lista-detalhes" style="display:none;"></ul>
+      <ul id="vacinasList" class="lista-detalhes" style="display:none;"></ul>
+      <ul id="examesList" class="lista-detalhes" style="display:none;"></ul>
+    </div>
+
+    <button id="btnModificar">Modificar</button>
+
+  </div>
+</main>
+
+<script src="../js/editar_animal.js"></script>
+</body>
+</html>

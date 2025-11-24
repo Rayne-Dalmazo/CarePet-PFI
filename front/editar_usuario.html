@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário - CarePet</title>
+
+    <link rel="stylesheet" href="../css/editar_usuario.css">
+</head>
+<body>
+    
+    <header class="topo">
+        <div class="logo">
+            <img src="../imagens/logo.png" alt="Logo">
+            <h1>CarePet</h1>
+        </div>
+
+        <div class="acoes">
+            <button onclick="window.location.href='tela_principal.html'" class="btn">Voltar</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h2>Editar dados do(a) Tutor(a)</h2>
+
+        <div class="card-form">
+
+            <div class="foto-user">
+                <img id="fotoPreview" src="../imagens/default-user.png" alt="Foto do Usuário">
+                <label for="inputFoto" class="trocarFoto">Trocar foto</label>
+                <input type="file" id="inputFoto" style="display: none;">
+            </div>
+
+            <form id="formUsuario">
+
+                <label>Nome</label>
+                <input id="nome" type="text">
+
+                <label>Email</label>
+                <input id="email" type="email">
+
+                <label>Senha (deixe vazio para não alterar)</label>
+                <input id="senha" type="password">
+
+                <button type="submit" class="btnSalvar">Salvar Alterações</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="../js/editar_usuario.js"></script>
+</body>
+</html>

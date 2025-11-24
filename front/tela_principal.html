@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarePet</title>
+  <link rel="stylesheet" href="../css/tela_principal.css">
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="../imagens/logo.png" alt="Logo CarePet" class="logo">
+      <h1>CarePet</h1>
+    </div>
+    <div class="menu">
+      <button id="btnUsuario" class="btn-topo">Usuário</button>
+      <button id="btnSair" class="btn-topo">Sair</button>
+    
+    </div>
+  </header>
+
+  <main>
+    <section class="perfil">
+      <div class="foto-perfil">
+        <input type="file" id="inputFoto" accept="image/*" hidden>
+        <img id="fotoTutor" src="user.png" alt="Foto do tutor">
+        <label for="inputFoto" class="trocar-foto">📷</label>
+      </div>
+      <h2 class="titulo-tutor">Tutor(a)</h2>
+      <h3 id="nomeTutor">Carregando...</h3>
+    </section>
+
+    <section class="area-animais">
+      <button id="btnAdicionar" class="btn-adicionar">+ Adicionar Animal </button>
+      <div id="listaAnimais" class="lista-animais"></div>
+    </section>
+  </main>
+
+
+  <script src="../js/script_inicial.js"></script>
+</div>
+</body>
+</html>

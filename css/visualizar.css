@@ -1,0 +1,119 @@
+body {
+  background: #ffffff;
+  font-family: "Segoe UI";
+  margin: 0;
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar {
+  background: none;
+  border: none;
+  font-size: 32px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* CARD PRINCIPAL */
+.card-principal {
+  width: 85%;
+  max-width: 1100px;
+  background: #f3ece9;
+  margin: 60px auto;
+  padding: 60px 50px;
+  border-radius: 35px;
+  box-shadow: 0 4px 12px #0001;
+  position: relative;
+}
+
+/* FOTO DENTRO DO CARD */
+.foto-area {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #555;
+  overflow: hidden;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-animal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TÍTULO */
+.titulo {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* LINHAS */
+.linhas {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.coluna {
+  width: 50%;
+}
+
+.campo {
+  margin-bottom: 25px;
+}
+
+.campo label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.valor {
+  border-bottom: 1px solid #777;
+  padding: 5px 0;
+  color: #444;
+  font-size: 16px;
+}
+
+/* ÍCONES */
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 40px;
+}
+
+.icon {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon img {
+  width: 55px;
+}
+
+.icon p {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ÁREA DINÂMICA */
+#conteudo-area {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px #0001;
+}

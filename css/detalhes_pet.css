@@ -1,0 +1,111 @@
+/* Fundo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #083b3f;
+}
+
+/* HEADER */
+header {
+    background-color: #a6d7cd;
+    padding: 15px 25px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 50px;
+}
+
+/* TÍTULO */
+header h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+    color: #083b3f;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.container h1 {
+    text-align: center;
+    color: #083b3f;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.card {
+    background: #ede8e8;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #0b5458;
+}
+
+/* FORM ELEMENTOS */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #b8cfcf;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* BOTÕES */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0b5458;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #063d3f;
+}
+/* Botão de voltar */
+.btn-voltar {
+    background-color: #1a6240;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-voltar:hover {
+    background-color: #145233;
+    transform: scale(1.03);
+}

@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #9cd0c3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+header img {
+  height: 50px;
+}
+
+header h1 {
+  font-family: 'Georgia', serif;
+  color: #304c47;
+  font-size: 28px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu button {
+  background-color: #68b5a0;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background-color: #5aa38f;
+}
+
+/* Conteúdo principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Foto do pet */
+.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+}
+
+.foto input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#previewFoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+#textoFoto {
+  position: absolute;
+  font-size: 14px;
+}
+
+.info-box {
+  background-color: #efeaea;
+  width: 75%;
+  margin-top: 25px;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
+
+.info-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+/* Formulário */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 40px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 80%;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid #777;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+}
+
+select {
+  background-color: transparent;
+  border-bottom: 1px solid #777;
+  cursor: pointer;
+}
+
+/* botões radio */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio-btn.active {
+  background-color: #68b5a0;
+  color: white;
+  border-color: #68b5a0;
+}
+
+/* ============================
+   ÍCONES DAS SEÇÕES (CORRIGIDO!)
+=============================== */
+.icones-secao {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 25px;
+}
+
+.icones-secao div {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icones-secao div:hover {
+  transform: scale(1.05);
+}
+
+.icones-secao img {
+  width: 80px;   /* tamanho ajustado */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Botão finalizar */
+.finalizar {
+  display: block;
+  margin: 25px auto 10px;
+  background-color: #68b5a0;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.finalizar:hover {
+  background-color: #5aa38f;
+}
+
+/* Botão voltar */
+.voltar {
+  position: absolute;
+  left: 20px;
+  top: 80px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #68b5a0;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.voltar:hover {
+  transform: translateX(-5px);
+  color: #24696d;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 380px;
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.popup-btns {
+  display: flex;
+  justify-content: space-between;
+}

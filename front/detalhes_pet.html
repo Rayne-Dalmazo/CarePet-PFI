@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/detalhes_pet.css">
+    <title>Detalhes do Pet</title>
+
+    <style>
+        /* Deixa TODAS as seções escondidas por padrão */
+        .card { 
+            display: none; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="../imagens/logo.png" alt="CarePet Logo" class="logo">
+            <h2>CarePet</h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Detalhes do Pet</h1>
+
+        <!-- ============================
+             REMÉDIOS
+        ============================== -->
+        <div class="card" id="card-remedios">
+            <h2>Remédios</h2>
+
+            <label>Nome do Remédio:</label>
+            <input id="remedioNome" type="text" placeholder="Ex: Prednisolona">
+
+            <label>Dosagem:</label>
+            <input id="remedioDosagem" type="text" placeholder="Ex: 5mg 1x ao dia">
+
+            <label>Data de Início:</label>
+            <input id="remedioDataInicio" type="date">
+
+            <button id="btnSalvarRemedio">Salvar Remédio</button>
+            <button onclick="proximo('vacinas')">Próximo ➜</button>
+
+        </div>
+
+        <!-- ============================
+             VACINAS
+        ============================== -->
+        <div class="card" id="card-vacinas">
+            <h2>Vacinas</h2>
+
+            <label>Vacina:</label>
+            <input id="vacinaNome" type="text" placeholder="Ex: V8 / Antirrábica">
+
+            <label>Data da Aplicação:</label>
+            <input id="vacinaDataAplicacao" type="date">
+
+            <label>Próxima Dose:</label>
+            <input id="vacinaProximaDose" type="date">
+
+            <button id="btnSalvarVacina">Salvar Vacina</button>
+            <button onclick="proximo('exames')">Próximo ➜</button>
+
+        </div>
+
+        <!-- ============================
+             EXAMES
+        ============================== -->
+  <div class="card" id="card-exames">
+    <h2>Exames</h2>
+
+    <label>Tipo de Exame:</label>
+    <input id="exameNome" type="text" placeholder="Ex: Hemograma">
+
+    <label>Data do Exame:</label>
+    <input id="exameData" type="date">
+
+    <label>Resultado / Observações/ Link do Pdf:</label>
+    <textarea id="exameDescricao" placeholder="Resultado do exame"></textarea>
+
+
+    <button id="btnSalvarExame">Salvar Exame</button>
+    <button onclick="proximo('remedios')">Próximo ➜</button>
+
+</div>
+
+<button class="btn-voltar" onclick="window.location.href='tela_principal.html'">
+    ⬅ Voltar para a Tela Inicial
+</button>
+
+    <script src="../js/detalhes_pet.js"></script>
