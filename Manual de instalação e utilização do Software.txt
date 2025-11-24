@@ -1,0 +1,50 @@
+﻿Manual de instalação e utilização do Software
+* Requisitos do Sistema
+Antes de instalar, verifique se você tem:
+1. Node.js instalado (versão 18 ou superior)
+2. NPM (já vem com o Node)
+3. MySQL Workbench
+4. Editor de código (VS Code recomendado)
+
+
+* Instalação
+Baixe o projeto ou clone o repositório. (git clone <url-do-seu-repositório>)
+Criação do Banco de Dado : Ao baixar o repositório abra a pasta “Banco de Dados” e abra o arquivo “carepet2.sql” no mysql workbench ,  logo após aberto clique em “ok” e assim o codigo é informado a frente e clique no simbolo de raio para criar o banco
+
+Abra a pasta do projeto no seu computador.
+Instale as dependências no terminal :
+1. npm install
+2. npm install multer
+
+
+* Executando o Servidor
+No terminal dentro da pagina server, digite:
+node server.js
+* Utilização do Software
+ Login
+Digite seu e-mail e senha.
+
+Clique em Entrar.
+
+ Cadastro de Usuário
+Preencha nome, e-mail e senha.
+Clique em Cadastrar.
+
+ Página Inicial
+Mostra os atalhos para todas as áreas do sistema.
+
+ Cadastro do Animal
+Informe nome, espécie, idade e foto.
+Clique em Salvar.
+
+Visualizar Animal
+Veja todos os dados do animal.
+Pode editar ou excluir.
+Vacinas / Remédios / Exames
+Escolha a categoria.
+Preencha as informações.
+Salve para registrar.
+
+Perfil do Usuário
+Pode mudar nome, foto, e-mail e senha.
+Salve para atualizar.
