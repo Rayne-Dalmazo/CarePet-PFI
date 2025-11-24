@@ -1,0 +1,65 @@
+Caso a arquivo "carepet2.sql" não funcione abra o my sql e crie uma nova connections
+com o nome "carepet", o hostname:"localhost", port:3306 , user:root , com a senha "ifprquedas" e assim tera criado o banco 
+
+dentro do painel cola esse codigo para a criação das tabelas 
+
+CREATE DATABASE carepet;
+USE carepet;
+
+CREATE TABLE usuario (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(150),
+    senha VARCHAR(80),
+    foto LONGBLOB,
+    token_recuperacao VARCHAR(255)
+);
+CREATE TABLE cadastro (
+    email VARCHAR(150),
+    senha VARCHAR(10),
+    nome_completo CHAR(100),
+    id_usuario INT,
+    imagem LONGBLOB,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+CREATE TABLE animais (
+    id_animais INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade CHAR(2),
+    sexo ENUM('M', 'F'),
+    raca VARCHAR(150),
+    castrado TINYINT(1),
+    adotado TINYINT(1),
+    porte VARCHAR(30),
+    foto LONGBLOB,
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+CREATE TABLE exames (
+    id_exame INT AUTO_INCREMENT PRIMARY KEY,
+    id_animais INT,
+    nome VARCHAR(150),
+    data_exame DATE,
+    descricao TEXT,
+    foto LONGBLOB,
+    FOREIGN KEY (id_animais) REFERENCES animais(id_animais)
+);
+CREATE TABLE remedios (
+    id_remedios INT AUTO_INCREMENT PRIMARY KEY,
+    id_animais INT,
+    nome VARCHAR(150),
+    dosagem VARCHAR(150),
+    data_inicio DATE,
+    FOREIGN KEY (id_animais) REFERENCES animais(id_animais)
+);
+
+CREATE TABLE vacinas (
+    id_vacinas INT AUTO_INCREMENT PRIMARY KEY,
+    id_animais INT,
+    nome VARCHAR(150),
+    data_aplicacao DATE,
+    proxima_dose DATE,
+    FOREIGN KEY (id_animais) REFERENCES animais(id_animais)
+);
+
+assim vc terá criado o banco para a utilização do sistema
