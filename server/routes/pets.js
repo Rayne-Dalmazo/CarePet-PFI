@@ -44,7 +44,7 @@ router.post("/animal", upload.single("foto"), (req, res) => {
 
       res.json({
         mensagem: "Animal cadastrado com sucesso!",
-        id_animal: resultado.insertId   // 🔥 aqui está o ID que faltava
+        id_animal: resultado.insertId  
       });
     }
   );
@@ -65,7 +65,7 @@ router.get("/animais/:id_usuario", (req, res) => {
       return res.status(500).json({ erro: "Erro ao buscar animais" });
     }
 
-    // 🔥 Converter foto Buffer -> Base64
+   
     const animaisConvertidos = resultados.map(animal => ({
       ...animal,
       foto: animal.foto ? animal.foto.toString("base64") : null
