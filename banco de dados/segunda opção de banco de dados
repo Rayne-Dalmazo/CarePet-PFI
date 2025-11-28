@@ -12,7 +12,6 @@ CREATE TABLE usuario (
     email VARCHAR(150),
     senha VARCHAR(80),
     foto LONGBLOB,
-    token_recuperacao VARCHAR(255)
 );
 CREATE TABLE cadastro (
     email VARCHAR(150),
@@ -26,7 +25,7 @@ CREATE TABLE animais (
     id_animais INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
     idade CHAR(2),
-    sexo ENUM('M', 'F'),
+    sexo ENUM('Macho', 'Fêmea'),
     raca VARCHAR(150),
     castrado TINYINT(1),
     adotado TINYINT(1),
